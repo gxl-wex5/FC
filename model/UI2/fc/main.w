@@ -13,7 +13,7 @@
   <column label="月销量" name="fRecord" type="Integer" xid="xid10"></column></div></div> 
 <div component="$UI/system/components/justep/panel/panel" class="x-panel x-full" xid="panel1">
    <div class="x-panel-content" xid="content1"><div component="$UI/system/components/justep/contents/contents" class="x-contents x-full" active="0" xid="contents1">
-   <div class="x-contents-content x-cards" xid="homeContent"><div component="$UI/system/components/justep/panel/panel" class="x-panel x-full" xid="panel2">
+   <div class="x-contents-content x-cards" xid="homeContent"><div component="$UI/system/components/justep/panel/panel" class="x-panel x-full x-has-iosstatusbar" xid="panel2">
    <div class="x-panel-top" xid="top2"><div component="$UI/system/components/justep/titleBar/titleBar" class="x-titlebar" xid="titleBar1" title="FC">
    <div class="x-titlebar-left" xid="left1"></div>
    <div class="x-titlebar-title" xid="title1">FC</div>
@@ -22,18 +22,25 @@
    <div class="x-content-center x-pull-down container" xid="div1">
     <i class="x-pull-down-img glyphicon x-icon-pull-down" xid="i3"></i>
     <span class="x-pull-down-label" xid="span3">下拉刷新...</span></div> 
-   <div class="x-scroll-content" xid="div2"><div component="$UI/system/components/justep/panel/panel" class="x-panel x-card" xid="panel4">
+   <div class="x-scroll-content" xid="div2"><div component="$UI/system/components/justep/panel/panel" class="panel panel-default x-card" xid="panel4">
    
-   <div component="$UI/system/components/bootstrap/carousel/carousel" class="x-carousel" xid="carousel2" auto="true">
+   <div component="$UI/system/components/bootstrap/carousel/carousel" class="x-carousel carousel" xid="carousel2" auto="true">
    <ol class="carousel-indicators" xid="ol2"></ol>
    <div class="x-contents carousel-inner" role="listbox" component="$UI/system/components/justep/contents/contents" active="0" slidable="true" wrap="true" swipe="true" routable="false" xid="contents3">
     <div class="x-contents-content" xid="content10"><img src="" alt="" xid="image1" class="tb-img1"></img></div></div> 
    
    </div></div>
-  <div component="$UI/system/components/justep/panel/panel" class="x-panel x-full" xid="panel5">
-   <div class="x-panel-content" xid="content8"></div>
-   </div>
-  <div component="$UI/system/components/justep/panel/panel" class="x-panel x-card" xid="panel6">
+  <div component="$UI/system/components/justep/panel/panel" class="panel panel-default x-card" xid="panel5">
+   <table class="table tb-menu" component="$UI/system/components/bootstrap/table/table" xid="table1">
+   
+   <tbody class="x-list-template" xid="listTemplate1">
+    <tr xid="tr2">
+     <td xid="td1">
+  <div xid="div9"><span xid="span11"><![CDATA[一元夺宝]]></span></div></td>
+     <td xid="td2"><div xid="div10"><span xid="span12"><![CDATA[专卖品]]></span></div></td>
+     <td xid="td3"><div xid="div11"><span xid="span13"><![CDATA[鉴赏品]]></span></div></td>
+     <td xid="td4"><div xid="div12"><span xid="span14"><![CDATA[晒单分享]]></span></div></td></tr> </tbody> </table></div>
+  <div component="$UI/system/components/justep/panel/panel" class="x-panel x-card panel panel-default" xid="panel6">
    <div component="$UI/system/components/justep/list/list" class="x-list" xid="list1" data="goodsData">
    <ul class="x-list-template" xid="listTemplateUl1">
     <li xid="li1" class="col col-xs-6 tb-twoColList"><div xid="div4"><img src="" alt="" xid="image2" bind-attr-src='$model.getImageUrl(val("fImg"))' class="img-rounded img-responsive media-object"></img>
