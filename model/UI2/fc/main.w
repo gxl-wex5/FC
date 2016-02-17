@@ -3,7 +3,14 @@
 <div xmlns="http://www.w3.org/1999/xhtml" xid="window" class="window" component="$UI/system/components/justep/window/window" design="device:m;">  
   <div component="$UI/system/components/justep/model/model" xid="model" onModelConstruct="modelModelConstruct"><div component="$UI/system/components/justep/data/data" autoLoad="true" xid="imgData" idColumn="id" onCustomRefresh="imgDataCustomRefresh"><column label="id" name="id" type="String" xid="xid1"></column>
   <column label="图片" name="fImgUrl" type="String" xid="xid2"></column>
-  <column label="链接地址" name="fUrl" type="String" xid="xid3"></column></div></div> 
+  <column label="链接地址" name="fUrl" type="String" xid="xid3"></column></div>
+  <div component="$UI/system/components/justep/data/data" autoLoad="true" xid="goodsData" idColumn="id" onCustomRefresh="goodsDataCustomRefresh"><column label="id" name="id" type="String" xid="xid4"></column>
+  <column label="店铺ID" name="fShopID" type="String" xid="xid5"></column>
+  <column label="标题" name="fTitle" type="String" xid="xid6"></column>
+  <column label="图片" name="fImg" type="String" xid="xid7"></column>
+  <column label="价格" name="fPrice" type="Float" xid="xid8"></column>
+  <column label="邮费" name="fPostage" type="String" xid="xid9"></column>
+  <column label="月销量" name="fRecord" type="Integer" xid="xid10"></column></div></div> 
 <div component="$UI/system/components/justep/panel/panel" class="x-panel x-full" xid="panel1">
    <div class="x-panel-content" xid="content1"><div component="$UI/system/components/justep/contents/contents" class="x-contents x-full" active="0" xid="contents1">
    <div class="x-contents-content x-cards" xid="homeContent"><div component="$UI/system/components/justep/panel/panel" class="x-panel x-full" xid="panel2">
@@ -24,13 +31,18 @@
    
    </div></div>
   <div component="$UI/system/components/justep/panel/panel" class="x-panel x-full" xid="panel5">
-   <div class="x-panel-top" xid="top5"></div>
    <div class="x-panel-content" xid="content8"></div>
-   <div class="x-panel-bottom" xid="bottom5"></div></div>
-  <div component="$UI/system/components/justep/panel/panel" class="x-panel x-full" xid="panel6">
-   <div class="x-panel-top" xid="top6"></div>
-   <div class="x-panel-content" xid="content9"></div>
-   <div class="x-panel-bottom" xid="bottom6"></div></div></div>
+   </div>
+  <div component="$UI/system/components/justep/panel/panel" class="x-panel x-card" xid="panel6">
+   <div component="$UI/system/components/justep/list/list" class="x-list" xid="list1" data="goodsData">
+   <ul class="x-list-template" xid="listTemplateUl1">
+    <li xid="li1"><div xid="div4"><img src="" alt="" xid="image2" bind-attr-src='$model.getImageUrl(val("fImg"))'></img>
+  <div xid="div5"><h5 xid="h51" bind-text="ref('fTitle')">h5</h5>
+  <div xid="div6"><span xid="span5"><![CDATA[￥]]></span><span xid="span6" bind-text="ref('fPrice')"></span></div>
+  <div xid="div7"><span xid="span7"><![CDATA[月销]]></span>
+  <span xid="span8" bind-text="ref('fRecord')"></span>
+  <span xid="span9"><![CDATA[笔]]></span>
+  <span xid="span10" bind-text="ref('fPostage')"></span></div></div></div></li></ul> </div></div></div>
    <div class="x-content-center x-pull-up" xid="div3">
     <span class="x-pull-up-label" xid="span4">加载更多...</span></div> </div></div>
    </div></div>

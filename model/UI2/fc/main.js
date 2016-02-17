@@ -6,6 +6,11 @@ define(function(require){
 	var Model = function(){
 		this.callParent();
 	};
+	
+	// 图片路径转换
+	Model.prototype.getImageUrl = function(url) {
+		return require.toUrl(url);
+	};
 
 	Model.prototype.modelModelConstruct = function(event){
 		/*
@@ -56,6 +61,14 @@ define(function(require){
 				carousel.add('<img src="' + fImgUrl + '" class="tb-img1" bind-click="openPageClick" pagename="' + fUrl + '"/>');
 			}
 		});
+	};
+
+	Model.prototype.goodsDataCustomRefresh = function(event){
+		/*
+		 * 1、加载商品数据
+		 */
+		var url = require.toUrl("./main/json/goodsData.json");
+		allData.loadDataFromFile(url, event.source, true);
 	};
 
 	return Model;
