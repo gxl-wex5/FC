@@ -71,5 +71,16 @@ define(function(require){
 		allData.loadDataFromFile(url, event.source, true);
 	};
 
+	Model.prototype.list1Click = function(event){
+		/*
+		 * 1、获取当前行 2、进入详细页面，并传值rowid
+		 */
+		var data = this.comp("goodsData");
+		justep.Shell.showPage("detail", {
+			goodsID : data.getValue("id"),
+			shopID : data.getValue("fShopID")
+		});
+	};
+
 	return Model;
 });

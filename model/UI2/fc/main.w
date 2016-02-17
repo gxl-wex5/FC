@@ -41,7 +41,7 @@
      <td xid="td3"><div xid="div11"><span xid="span13"><![CDATA[鉴赏品]]></span></div></td>
      <td xid="td4"><div xid="div12"><span xid="span14"><![CDATA[晒单分享]]></span></div></td></tr> </tbody> </table></div>
   <div component="$UI/system/components/justep/panel/panel" class="x-panel x-card panel panel-default" xid="panel6">
-   <div component="$UI/system/components/justep/list/list" class="x-list" xid="list1" data="goodsData">
+   <div component="$UI/system/components/justep/list/list" class="x-list" xid="list1" data="goodsData" bind-click="list1Click">
    <ul class="x-list-template" xid="listTemplateUl1">
     <li xid="li1" class="col col-xs-6 tb-twoColList"><div xid="div4"><img src="" alt="" xid="image2" bind-attr-src='$model.getImageUrl(val("fImg"))' class="img-rounded img-responsive media-object"></img>
   <div xid="div5" class="caption"><h5 xid="h51" bind-text="ref('fTitle')">h5</h5>

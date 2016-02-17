@@ -13,6 +13,9 @@ define(function(require){
 				main: {
 					url: require.toUrl("./main.w")
 				},
+				"detail" : {
+					url : require.toUrl('./detail.w')
+				}
 				
 //				p2: {
 //					url: require.toUrl("./interactive/page2.w")
