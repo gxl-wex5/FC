@@ -36,13 +36,13 @@
   <div component="$UI/system/components/justep/panel/panel" class="x-panel x-card" xid="panel6">
    <div component="$UI/system/components/justep/list/list" class="x-list" xid="list1" data="goodsData">
    <ul class="x-list-template" xid="listTemplateUl1">
-    <li xid="li1"><div xid="div4"><img src="" alt="" xid="image2" bind-attr-src='$model.getImageUrl(val("fImg"))'></img>
-  <div xid="div5"><h5 xid="h51" bind-text="ref('fTitle')">h5</h5>
-  <div xid="div6"><span xid="span5"><![CDATA[￥]]></span><span xid="span6" bind-text="ref('fPrice')"></span></div>
+    <li xid="li1" class="col col-xs-6 tb-twoColList"><div xid="div4"><img src="" alt="" xid="image2" bind-attr-src='$model.getImageUrl(val("fImg"))' class="img-rounded img-responsive media-object"></img>
+  <div xid="div5" class="caption"><h5 xid="h51" bind-text="ref('fTitle')">h5</h5>
+  <div xid="div6"><span xid="span5" class="text-danger"><![CDATA[￥]]></span><span xid="span6" bind-text="ref('fPrice')" class="text-danger"></span></div>
   <div xid="div7"><span xid="span7"><![CDATA[月销]]></span>
   <span xid="span8" bind-text="ref('fRecord')"></span>
   <span xid="span9"><![CDATA[笔]]></span>
-  <span xid="span10" bind-text="ref('fPostage')"></span></div></div></div></li></ul> </div></div></div>
+  <span xid="span10" bind-text="ref('fPostage')" class="pull-right"></span></div></div></div></li></ul> </div></div></div>
    <div class="x-content-center x-pull-up" xid="div3">
     <span class="x-pull-up-label" xid="span4">加载更多...</span></div> </div></div>
    </div></div>
