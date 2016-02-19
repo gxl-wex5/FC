@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <div xmlns="http://www.w3.org/1999/xhtml" xid="window" class="window" component="$UI/system/components/justep/window/window" design="device:m;">  
-  <div component="$UI/system/components/justep/model/model" xid="model" style="height:auto;left:645px;top:152px;"><div component="$UI/system/components/justep/data/data" autoLoad="true" xid="imgData" idColumn="id" onCustomRefresh="imgDataCustomRefresh">
+  <div component="$UI/system/components/justep/model/model" xid="model" style="height:auto;left:631px;top:61px;"><div component="$UI/system/components/justep/data/data" autoLoad="true" xid="imgData" idColumn="id" onCustomRefresh="imgDataCustomRefresh">
    <column label="id" name="id" type="String" xid="xid2"></column>
    <column label="图片" name="fImgUrl" type="String" xid="xid1"></column></div>
   <div component="$UI/system/components/justep/data/data" autoLoad="true" xid="commentsData" idColumn="id" onCustomRefresh="commentsDataCustomRefresh">
@@ -65,5 +65,24 @@
    <div class="x-contents carousel-inner" role="listbox" component="$UI/system/components/justep/contents/contents" active="0" slidable="true" wrap="true" swipe="true" routable="false" xid="contents1">
     <div class="x-contents-content" xid="content2"><img src="" alt="" xid="image1" class="image-wall tb-img"></img></div></div> 
    
-   </div></div>
+   </div>
+  <div component="$UI/system/components/justep/panel/panel" class="panel panel-default x-card panel-body" xid="panel2">
+   <div component="$UI/system/components/bootstrap/row/row" class="row tb-nopadding" xid="row1">
+   <div class="col col-xs-10  tb-nopadding" xid="col1"><h4 xid="h41" class=" text-black" bind-text="goodsData.ref('fTitle')"><![CDATA[]]></h4>
+  <div xid="div1"><span xid="span8" class="text-danger h3"><![CDATA[￥]]></span>
+  <span xid="span9" bind-text="goodsData.ref('fPrice')" class="text-danger h3"></span></div>
+  <div xid="div2" class="text-muted"><span xid="span10"><![CDATA[价格：]]></span>
+  <span xid="span11" class="tb-text-del"><![CDATA[￥]]></span>
+  <span xid="span12" bind-text="goodsData.ref('fOldPrice')" class="tb-text-del"></span></div></div>
+   <div class="col col-xs-2  tb-nopadding" xid="col2"><a component="$UI/system/components/justep/button/button" class="btn btn-link btn-icon-top pull-right tb-nopadding" label="分享" xid="shareBtn" icon="icon-android-share">
+   <i xid="i4" class="text-success icon-android-share"></i>
+   <span xid="span13" class="text-success">分享</span></a></div>
+   </div>
+  <div component="$UI/system/components/bootstrap/row/row" class="row text-muted h5 tb-nopadding" xid="row2">
+   <div class="col col-xs-4  tb-nopadding" xid="col4"><span xid="span14"><![CDATA[快递]]></span>
+  <span xid="span15" bind-text="goodsData.ref('fPostage')"></span></div>
+   <div class="col col-xs-4" xid="col5"><span xid="span16"><![CDATA[月销]]></span>
+  <span xid="span17" bind-text="goodsData.ref('fRecord')"></span>
+  <span xid="span18"><![CDATA[笔]]></span></div>
+   <div class="col col-xs-4" xid="col6"><span xid="span19" bind-text="goodsData.ref('fAddress')"></span></div></div></div></div>
    <div class="x-panel-bottom" xid="bottom1"></div></div></div>
