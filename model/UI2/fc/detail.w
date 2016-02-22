@@ -66,7 +66,7 @@
     <div class="x-contents-content" xid="content2"><img src="" alt="" xid="image1" class="image-wall tb-img"></img></div></div> 
    
    </div>
-  <div component="$UI/system/components/justep/panel/panel" class="panel panel-default x-card panel-body" xid="panel2">
+  <div component="$UI/system/components/justep/panel/panel" class="panel panel-default x-card panel-body">
    <div component="$UI/system/components/bootstrap/row/row" class="row tb-nopadding" xid="row1">
    <div class="col col-xs-10  tb-nopadding" xid="col1"><h4 xid="h41" class=" text-black" bind-text="goodsData.ref('fTitle')"><![CDATA[]]></h4>
   <div xid="div1"><span xid="span8" class="text-danger h3"><![CDATA[￥]]></span>
@@ -85,9 +85,20 @@
   <span xid="span17" bind-text="goodsData.ref('fRecord')"></span>
   <span xid="span18"><![CDATA[笔]]></span></div>
    <div class="col col-xs-4" xid="col6"><span xid="span19" bind-text="goodsData.ref('fAddress')"></span></div></div></div>
-  <div component="$UI/system/components/justep/panel/panel" class="panel panel-heading x-card" xid="panel3" bind-click="popOverClick">
+  <div component="$UI/system/components/justep/panel/panel" class="panel panel-heading x-card" bind-click="popOverClick">
    <i xid="i5" class="text-muted icon-chevron-right pull-right btn-sm"></i><span xid="span20"><![CDATA[选择颜色分类]]></span>
-  </div></div>
+  </div>
+  <div component="$UI/system/components/justep/panel/panel" class="x-panel x-card panel panel-default">
+   <div xid="div9"><div xid="div10"><span xid="span27"><![CDATA[宝贝评价（]]></span>
+  <span xid="span28" bind-text="goodsData.ref('fCommentsNumber')"></span>
+  <span xid="span29"><![CDATA[）]]></span></div>
+  <div xid="div11" class="media-left"><img src="" alt="" xid="image3" bind-attr-src=' $model.commentsData.val("fUserImg")' class="img-circle" style="width:40px;"></img></div>
+  <div xid="div12" class="media-body"><span xid="span30" bind-text="commentsData.ref('fUserName')"></span></div>
+  <div xid="div13"><span xid="span31" bind-text="commentsData.ref('fContent')"></span></div>
+  <div xid="div14" class="text-muted"><span xid="span32" bind-text="commentsData.ref('fDate')"></span></div>
+  <div component="$UI/system/components/justep/button/buttonGroup" class="btn-group btn-group-justified" tabbed="true" xid="buttonGroup2"><a component="$UI/system/components/justep/button/button" class="btn btn-link btn-only-label text-black" label="查看更多评论" xid="button5">
+   <i xid="i10"></i>
+   <span xid="span33">查看更多评论</span></a></div></div></div></div>
    <div class="x-panel-bottom" xid="bottom1"></div></div>
   <div component="$UI/system/components/justep/popOver/popOver" class="x-popOver" xid="popOver">
    <div class="x-popOver-overlay" xid="div3"></div>
