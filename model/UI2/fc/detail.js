@@ -104,6 +104,24 @@ define(function(require){
 		justep.Shell.fireEvent("onShoppingContent",{});
 		justep.Shell.showMainPage();
 	};
+	
+	//颜色选择弹出窗显示
+	Model.prototype.popOverClick = function(event){		
+		this.comp("stateData").setValue("state", 1);
+		this.comp("popOver").show();
+	};
+	
+	//颜色状态修改
+	Model.prototype.colorLiClick = function(event){		
+		/*
+		1、颜色选择点击事件
+		2、修改当前颜色状态
+		*/
+		var colorData=this.comp("colorData");
+		var row=colorData.getCurrentRow();		
+		colorData.setValue("fState", "0", colorData.find(["fState"],["1"],true,true,true)[0]);
+		colorData.setValue("fState", "1",row);
+	};
 
 	return Model;
 });

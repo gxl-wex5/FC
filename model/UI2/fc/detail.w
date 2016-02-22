@@ -60,7 +60,7 @@
    <div class="x-titlebar-right reverse" xid="right1"><a component="$UI/system/components/justep/button/button" class="btn btn-link btn-only-icon tb-moreBtn pull-right" xid="moreBtn" icon="icon-android-more">
    <i xid="i3" class="icon-android-more"></i>
    <span xid="span3"></span></a></div></div></div>
-   <div class="x-panel-content" xid="content1"><div component="$UI/system/components/bootstrap/carousel/carousel" class="x-carousel carousel" xid="carousel1">
+   <div class="x-panel-content x-cards tb-trans" xid="content1"><div component="$UI/system/components/bootstrap/carousel/carousel" class="x-carousel carousel" xid="carousel1">
    <ol class="carousel-indicators" xid="default1"></ol>
    <div class="x-contents carousel-inner" role="listbox" component="$UI/system/components/justep/contents/contents" active="0" slidable="true" wrap="true" swipe="true" routable="false" xid="contents1">
     <div class="x-contents-content" xid="content2"><img src="" alt="" xid="image1" class="image-wall tb-img"></img></div></div> 
@@ -84,5 +84,25 @@
    <div class="col col-xs-4" xid="col5"><span xid="span16"><![CDATA[月销]]></span>
   <span xid="span17" bind-text="goodsData.ref('fRecord')"></span>
   <span xid="span18"><![CDATA[笔]]></span></div>
-   <div class="col col-xs-4" xid="col6"><span xid="span19" bind-text="goodsData.ref('fAddress')"></span></div></div></div></div>
-   <div class="x-panel-bottom" xid="bottom1"></div></div></div>
+   <div class="col col-xs-4" xid="col6"><span xid="span19" bind-text="goodsData.ref('fAddress')"></span></div></div></div>
+  <div component="$UI/system/components/justep/panel/panel" class="panel panel-heading x-card" xid="panel3" bind-click="popOverClick">
+   <i xid="i5" class="text-muted icon-chevron-right pull-right btn-sm"></i><span xid="span20"><![CDATA[选择颜色分类]]></span>
+  </div></div>
+   <div class="x-panel-bottom" xid="bottom1"></div></div>
+  <div component="$UI/system/components/justep/popOver/popOver" class="x-popOver" xid="popOver">
+   <div class="x-popOver-overlay" xid="div3"></div>
+   <div class="x-popOver-content" xid="div4"><a component="$UI/system/components/justep/button/button" class="btn btn-link btn-only-icon pull-right tb-close text-black" xid="button1" icon="icon-ios7-close-outline" onClick="{operation:'popOver.hide'}">
+   <i xid="i6" class="icon-ios7-close-outline"></i>
+   <span xid="span4"></span></a>
+  <img src="$UI/demo/taobao/detail/img/pic1.png" alt="" xid="image2" class="img-thumbnail tb-colorImg"></img>
+  <div xid="div5" class="tb-title"><span xid="span5" class="text-danger"><![CDATA[￥]]></span>
+  <span xid="span6" bind-text="goodsData.ref('fPrice')" class="text-danger h4"></span>
+  <div xid="div6"></div>
+  <span xid="span7"><![CDATA[库存]]></span>
+  <span xid="span21" bind-text="goodsData.ref('fRecord')"></span>
+  <span xid="span22"><![CDATA[件]]></span>
+  <h5 xid="h51" class="text-black"><![CDATA[请选择颜色分类]]></h5></div>
+  <div xid="div7" class="panel-body"><h4 xid="h42" class="text-black"><![CDATA[颜色分类]]></h4>
+  <div component="$UI/system/components/justep/list/list" class="x-list tb-colorList" xid="colorList" data="colorData" dataItemAlias="colorRow" bind-click="colorLiClick">
+   <ul class="x-list-template x-min-height" xid="ul2" componentname="$UI/system/components/justep/list/list#listTemplateUl" id="undefined_listTemplateUl1">
+    <li xid="li1" class="col col-xs-6" componentname="li(html)" id="undefined_li1"><div xid="div8" class="text-center" bind-css="{'current':colorRow.val('fState')==1}"><span xid="span23" bind-text="colorRow.ref('fColor')"></span></div></li></ul> </div></div></div></div></div>
