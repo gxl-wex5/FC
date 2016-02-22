@@ -122,7 +122,24 @@
    <div class="col col-xs-6" xid="col13"><a component="$UI/system/components/justep/button/button" class="btn btn-link btn-icon-left btn-block thumbnail text-black" label="进店逛逛" xid="storeBtn" icon="icon-bag">
    <i xid="i12" class="icon-bag"></i>
    <span xid="span45">进店逛逛</span></a></div>
-   </div></div></div>
+   </div></div>
+  <div component="$UI/system/components/justep/panel/panel" class="panel x-card" xid="panel3">
+   <div component="$UI/system/components/justep/button/buttonGroup" class="btn-group btn-group-justified tb-tabs" tabbed="true" xid="buttonGroup3"><a component="$UI/system/components/justep/button/button" class="btn btn-link btn-only-label active" label="图文详情" xid="button9" target="detailsContent">
+   <i xid="i14"></i>
+   <span xid="span47">图文详情</span></a>
+  <a component="$UI/system/components/justep/button/button" class="btn btn-link btn-only-label" label="产品参数" xid="button10" target="parameterContent">
+   <i xid="i15"></i>
+   <span xid="span48">产品参数</span></a></div>
+  <div component="$UI/system/components/justep/contents/contents" class="x-contents" active="0">
+   <div class="x-contents-content panel-body" xid="detailsContent"><div xid="div19" bind-html='$model.goodsData.val("fDetail")'></div></div>
+  <div class="x-contents-content panel-body" xid="parameterContent"><div component="$UI/system/components/justep/list/list" class="x-list x-cards" xid="list1" data="parameterData">
+   <ul class="x-list-template" xid="listTemplateUl1" componentname="$UI/system/components/justep/list/list#listTemplateUl" id="undefined_listTemplateUl1">
+    <li xid="li2" class="list-group-item x-min-height" componentname="li(html)" id="undefined_li2">
+    	<span bind-text="ref('fName')" class="col col-xs-4 tb-nopadding text-muted"/>  
+        <span bind-text="ref('fParameter')" class="x-flex col col-xs-8 tb-nopadding"/>  
+        <div class="clearfix"/> 
+    </li></ul> </div>
+  </div></div></div></div>
    <div class="x-panel-bottom" xid="bottom1"></div></div>
   <div component="$UI/system/components/justep/popOver/popOver" class="x-popOver" xid="popOver">
    <div class="x-popOver-overlay" xid="div3"></div>
