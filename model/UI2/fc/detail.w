@@ -105,4 +105,13 @@
   <div xid="div7" class="panel-body"><h4 xid="h42" class="text-black"><![CDATA[颜色分类]]></h4>
   <div component="$UI/system/components/justep/list/list" class="x-list tb-colorList" xid="colorList" data="colorData" dataItemAlias="colorRow" bind-click="colorLiClick">
    <ul class="x-list-template x-min-height" xid="ul2" componentname="$UI/system/components/justep/list/list#listTemplateUl" id="undefined_listTemplateUl1">
-    <li xid="li1" class="col col-xs-6" componentname="li(html)" id="undefined_li1"><div xid="div8" class="text-center" bind-css="{'current':colorRow.val('fState')==1}"><span xid="span23" bind-text="colorRow.ref('fColor')"></span></div></li></ul> </div></div></div></div></div>
+    <li xid="li1" class="col col-xs-6" componentname="li(html)" id="undefined_li1"><div xid="div8" class="text-center" bind-css="{'current':colorRow.val('fState')==1}"><span xid="span23" bind-text="colorRow.ref('fColor')"></span></div></li></ul> </div></div>
+  <a component="$UI/system/components/justep/button/button" class="btn btn-link btn-only-label btn-block tb-colorOk" label="确定" xid="button2" bind-visible='$model.stateData.val("state")==0'>
+   <i xid="i7"></i>
+   <span xid="span24">确定</span></a>
+  <div component="$UI/system/components/justep/button/buttonGroup" class="btn-group btn-group-justified tb-shopping" tabbed="true" xid="buttonGroup1"><a component="$UI/system/components/justep/button/button" class="btn btn-link btn-only-label" label="加入购物车" xid="button3">
+   <i xid="i8"></i>
+   <span xid="span25">加入购物车</span></a>
+  <a component="$UI/system/components/justep/button/button" class="btn btn-link btn-only-label" label="立即购买" xid="button4">
+   <i xid="i9"></i>
+   <span xid="span26">立即购买</span></a></div></div></div></div>
