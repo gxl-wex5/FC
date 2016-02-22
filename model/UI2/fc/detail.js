@@ -123,5 +123,26 @@ define(function(require){
 		colorData.setValue("fState", "1",row);
 	};
 
+	//加入购物车
+	Model.prototype.joinCartBtnClick = function(event){
+		/*
+		1、弹出商品尺码颜色选择框
+		2、点击确定后购物车中增加一条相应数据
+		*/
+		this.comp("stateData").setValue("state",0);
+		this.comp("popOver").show();
+	};
+
+	//购买按钮
+	Model.prototype.buyBtnClick = function(event){
+		/*
+		1、获取当前商品ID
+		2、传入新窗口，打开的窗口中显示购买确认页面
+		3、在打开的窗口中接收数据，并从服务端过滤数据
+		*/
+		this.comp("stateData").setValue("state","0");
+		this.comp("popOver").show();
+	};
+
 	return Model;
 });

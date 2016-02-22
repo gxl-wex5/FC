@@ -140,7 +140,23 @@
         <div class="clearfix"/> 
     </li></ul> </div>
   </div></div></div></div>
-   <div class="x-panel-bottom" xid="bottom1"></div></div>
+   <div class="x-panel-bottom" xid="bottom1"><div component="$UI/system/components/bootstrap/row/row" class="row">
+   <div class="col col-xs-5 tb-nopadding" xid="col15"><div component="$UI/system/components/justep/button/buttonGroup" class="btn-group btn-group-justified" tabbed="true" xid="buttonGroup4"><a component="$UI/system/components/justep/button/button" class="btn btn-link btn-icon-top" label="客服" xid="button11" icon="icon-ios7-chatboxes-outline">
+   <i xid="i16" class="icon-ios7-chatboxes-outline"></i>
+   <span xid="span50">客服</span></a>
+  <a component="$UI/system/components/justep/button/button" class="btn btn-link btn-icon-top" label="店铺" xid="button12" icon="icon-bag">
+   <i xid="i17" class="icon-bag"></i>
+   <span xid="span51">店铺</span></a>
+  <a component="$UI/system/components/justep/button/button" class="btn btn-link btn-icon-top" label="收藏" xid="button13" icon="icon-ios7-star-outline">
+   <i xid="i18" class="icon-ios7-star-outline"></i>
+   <span xid="span52">收藏</span></a></div></div>
+   <div class="col col-xs-7 tb-nopadding" xid="col16"><div component="$UI/system/components/justep/button/buttonGroup" class="btn-group btn-group-justified tb-shopping" tabbed="true" xid="buttonGroup5"><a component="$UI/system/components/justep/button/button" class="btn btn-link btn-only-label" label="加入购物车" xid="joinCartBtn" onClick="joinCartBtnClick">
+   <i xid="i19"></i>
+   <span xid="span53">加入购物车</span></a>
+  <a component="$UI/system/components/justep/button/button" class="btn btn-link btn-only-label" label="立即购买" xid="buyBtn" onClick="buyBtnClick">
+   <i xid="i20"></i>
+   <span xid="span54">立即购买</span></a></div></div>
+   </div></div></div>
   <div component="$UI/system/components/justep/popOver/popOver" class="x-popOver" xid="popOver">
    <div class="x-popOver-overlay" xid="div3"></div>
    <div class="x-popOver-content" xid="div4"><a component="$UI/system/components/justep/button/button" class="btn btn-link btn-only-icon pull-right tb-close text-black" xid="button1" icon="icon-ios7-close-outline" onClick="{operation:'popOver.hide'}">
