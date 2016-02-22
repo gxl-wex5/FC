@@ -98,7 +98,31 @@
   <div xid="div14" class="text-muted"><span xid="span32" bind-text="commentsData.ref('fDate')"></span></div>
   <div component="$UI/system/components/justep/button/buttonGroup" class="btn-group btn-group-justified" tabbed="true" xid="buttonGroup2"><a component="$UI/system/components/justep/button/button" class="btn btn-link btn-only-label text-black" label="查看更多评论" xid="button5">
    <i xid="i10"></i>
-   <span xid="span33">查看更多评论</span></a></div></div></div></div>
+   <span xid="span33">查看更多评论</span></a></div></div></div>
+  <div component="$UI/system/components/justep/panel/panel" class="panel panel-default x-card">
+   <div xid="div16" class="panel-body tb-nopadding"><div xid="div17" class="media-left"><img src="" alt="" xid="image4" bind-attr-src=' $model.shopData.val("fShopImg")' class="img-rounded" height="50px" style="width:50px;"></img></div>
+  <div xid="div18" class="media-body"><span xid="span34" bind-text="shopData.ref('fShopName')" class="show"></span>
+  <span xid="span35" bind-text="shopData.ref('fLevel')"></span></div>
+  <div component="$UI/system/components/bootstrap/row/row" class="row">
+   <div class="col col-xs-5" xid="col3"><span xid="span36" class="text-muted"><![CDATA[描述相符:]]></span>
+  <span xid="span37" bind-text="shopData.ref('fConsistent')" class="text-danger"></span></div>
+   <div class="col col-xs-5" xid="col7"><span xid="span38" class="text-muted"><![CDATA[服务态度:]]></span>
+  <span xid="span39" bind-text="shopData.ref('fService')" class="text-success"></span></div>
+   </div></div>
+  <div component="$UI/system/components/bootstrap/row/row" class="row">
+   <div class="col col-xs-6 tb-line" xid="col9"><span xid="span40" bind-text="shopData.ref('fGoodsNumber')" class="show text-center"></span>
+  <span xid="span41" class="show text-center text-muted"><![CDATA[全部宝贝]]></span></div>
+   <div class="col col-xs-6" xid="col10"><span xid="span42" bind-text="shopData.ref('fFocusNumber')" class="show text-center"></span>
+  <span xid="span43" class="show text-center text-muted"><![CDATA[关注人数]]></span></div>
+   </div>
+  <div component="$UI/system/components/bootstrap/row/row" class="row panel-body">
+   <div class="col col-xs-6" xid="col12"><a component="$UI/system/components/justep/button/button" class="btn btn-link btn-icon-left btn-block thumbnail text-black" label="查看宝贝分类" xid="classBtn" icon="icon-navicon">
+   <i xid="i11" class="icon-navicon"></i>
+   <span xid="span44">查看宝贝分类</span></a></div>
+   <div class="col col-xs-6" xid="col13"><a component="$UI/system/components/justep/button/button" class="btn btn-link btn-icon-left btn-block thumbnail text-black" label="进店逛逛" xid="storeBtn" icon="icon-bag">
+   <i xid="i12" class="icon-bag"></i>
+   <span xid="span45">进店逛逛</span></a></div>
+   </div></div></div>
    <div class="x-panel-bottom" xid="bottom1"></div></div>
   <div component="$UI/system/components/justep/popOver/popOver" class="x-popOver" xid="popOver">
    <div class="x-popOver-overlay" xid="div3"></div>
