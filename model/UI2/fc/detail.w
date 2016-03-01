@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <div xmlns="http://www.w3.org/1999/xhtml" xid="window" class="window" component="$UI/system/components/justep/window/window" design="device:m;">  
-  <div component="$UI/system/components/justep/model/model" xid="model" style="height:auto;left:631px;top:61px;"><div component="$UI/system/components/justep/data/data" autoLoad="true" xid="imgData" idColumn="id" onCustomRefresh="imgDataCustomRefresh">
+  <div component="$UI/system/components/justep/model/model" xid="model" style="height:auto;left:631px;top:61px;" onParamsReceive="modelParamsReceive"><div component="$UI/system/components/justep/data/data" autoLoad="true" xid="imgData" idColumn="id" onCustomRefresh="imgDataCustomRefresh">
    <column label="id" name="id" type="String" xid="xid2"></column>
    <column label="图片" name="fImgUrl" type="String" xid="xid1"></column></div>
   <div component="$UI/system/components/justep/data/data" autoLoad="true" xid="commentsData" idColumn="id" onCustomRefresh="commentsDataCustomRefresh">
@@ -48,7 +48,35 @@
    <data xid="default2">[{&quot;id&quot;:&quot;1&quot;,&quot;fGoodID&quot;:&quot;1&quot;,&quot;fColor&quot;:&quot;草绿（12支/盒）&quot;,&quot;fState&quot;:0},{&quot;id&quot;:&quot;2&quot;,&quot;fGoodID&quot;:&quot;1&quot;,&quot;fColor&quot;:&quot;橙色（12支/盒）&quot;,&quot;fState&quot;:0},{&quot;id&quot;:&quot;3&quot;,&quot;fGoodID&quot;:&quot;1&quot;,&quot;fColor&quot;:&quot;蓝色（12支/盒）&quot;,&quot;fState&quot;:0},{&quot;id&quot;:&quot;4&quot;,&quot;fGoodID&quot;:&quot;1&quot;,&quot;fColor&quot;:&quot;粉红（12支/盒）&quot;,&quot;fState&quot;:0},{&quot;id&quot;:&quot;5&quot;,&quot;fGoodID&quot;:&quot;1&quot;,&quot;fColor&quot;:&quot;黑色（12支/盒）&quot;,&quot;fState&quot;:0},{&quot;id&quot;:&quot;6&quot;,&quot;fGoodID&quot;:&quot;1&quot;,&quot;fColor&quot;:&quot;红色（12支/盒）&quot;,&quot;fState&quot;:0},{&quot;id&quot;:&quot;7&quot;,&quot;fGoodID&quot;:&quot;1&quot;,&quot;fColor&quot;:&quot;黄色（12支/盒）&quot;,&quot;fState&quot;:0},{&quot;id&quot;:&quot;8&quot;,&quot;fGoodID&quot;:&quot;1&quot;,&quot;fColor&quot;:&quot;绿色（12支/盒）&quot;,&quot;fState&quot;:0},{&quot;id&quot;:&quot;9&quot;,&quot;fGoodID&quot;:&quot;1&quot;,&quot;fColor&quot;:&quot;墨蓝（12支/盒）&quot;,&quot;fState&quot;:0},{&quot;id&quot;:&quot;10&quot;,&quot;fGoodID&quot;:&quot;1&quot;,&quot;fColor&quot;:&quot;天蓝（12支/盒）&quot;,&quot;fState&quot;:0},{&quot;id&quot;:&quot;11&quot;,&quot;fGoodID&quot;:&quot;1&quot;,&quot;fColor&quot;:&quot;紫色（12支/盒）&quot;,&quot;fState&quot;:0},{&quot;id&quot;:&quot;12&quot;,&quot;fGoodID&quot;:&quot;1&quot;,&quot;fColor&quot;:&quot;棕色（12支/盒）&quot;,&quot;fState&quot;:0},{&quot;id&quot;:&quot;13&quot;,&quot;fGoodID&quot;:&quot;1&quot;,&quot;fColor&quot;:&quot;12色混装（12支/盒）&quot;,&quot;fState&quot;:0}]</data></div>
   <div component="$UI/system/components/justep/data/data" autoLoad="true" xid="stateData" idColumn="state">
    <column label="显示状态" name="state" type="Integer" xid="xid26"></column>
-   <data xid="default4">[{&quot;state&quot;:0}]</data></div></div> 
+   <data xid="default4">[{&quot;state&quot;:0}]</data></div>
+  <div component="$UI/system/components/justep/data/baasData" autoLoad="true" xid="fcGoodsData" saveAction="saveGoods" queryAction="queryGoods" tableName="goods" url="/fc/fc" idColumn="gID" onAfterRefresh="fcGoodsDataAfterRefresh"><column label="产品编号" name="gID" type="Integer" xid="default5"></column>
+  <column label="产品名称" name="gName" type="String" xid="default6"></column>
+  <column label="产品价格" name="gPrice" type="Float" xid="default7"></column>
+  <column label="产品形状" name="gShape" type="String" xid="default8"></column>
+  <column label="产品长" name="gLength" type="Float" xid="default9"></column>
+  <column label="产品宽" name="gWidth" type="Float" xid="default10"></column>
+  <column label="产品高" name="gHeight" type="Float" xid="default11"></column>
+  <column label="产品重量" name="gWeight" type="Float" xid="default12"></column>
+  <column label="产品色彩" name="gColor" type="String" xid="default13"></column>
+  <column label="手环-SH、耳坠-RZ、胸坠-XZ、摆件-BJ、玩件-WJ、戒指-JZ" name="gType" type="String" xid="default14"></column>
+  <column label="产地" name="gAddr" type="String" xid="default15"></column>
+  <column label="产品制造者" name="gMaker" type="String" xid="default16"></column>
+  <column label="已卖出、正在卖、押金未付" name="gState" type="String" xid="default17"></column>
+  <column label="卖出时间" name="gBuyTime" type="DateTime" xid="default18"></column>
+  <column label="销售种类T:一元品、专卖品、鉴赏品" name="saleCategory" type="String" xid="default19"></column>
+  <column label="分为自卖品和代卖品" name="gOwner" type="String" xid="default20"></column>
+  <column label="原料产地" name="place" type="String" xid="default21"></column>
+  <column label="物品证书图片：指向文件夹" name="gCertificate" type="String" xid="default22"></column>
+  <column label="物品图片：指向文件夹" name="gPicture" type="String" xid="default23"></column>
+  <column label="产品详细介绍：：指向文件夹" name="gIntroduce" type="String" xid="default24"></column>
+  <column label="物品评价：指向物品评价表，客户对物品的评价" name="gEvaluate" type="String" xid="default25"></column>
+  <column label="物品级别：特优、优、良、中、普通、次" name="gLevel" type="String" xid="default26"></column>
+  <column label="T商家可修改，F不可修改" name="sChange" type="String" xid="default27"></column>
+  <column label="代销必须付押金" name="sYufu" type="Float" xid="default28"></column>
+  <column label="dcjhTable" name="dcjhTable" type="String" xid="default29"></column>
+  <column label="当数量为零时，产品卖出，即将抽奖" name="dcjhTotal" type="Float" xid="default30"></column>
+  <column label="商家编号" name="sID" type="String" xid="default31"></column>
+  <filter name="goodsFilter" xid="filter3"><![CDATA[gID = :goodsID]]></filter></div></div> 
 <div component="$UI/system/components/justep/panel/panel" class="x-panel x-full x-card tb-trans x-has-iosstatu" xid="panel">
    <div class="x-panel-top" xid="top1"><div component="$UI/system/components/justep/titleBar/titleBar" class="x-titlebar tb-box" xid="titleBar1">
    <div class="x-titlebar-left" xid="left1"><a component="$UI/system/components/justep/button/button" class="btn btn-link btn-only-icon tb-backBtn" xid="backBtn" icon="icon-chevron-left" onClick="backBtnClick">
@@ -68,9 +96,9 @@
    </div>
   <div component="$UI/system/components/justep/panel/panel" class="panel panel-default x-card panel-body">
    <div component="$UI/system/components/bootstrap/row/row" class="row tb-nopadding" xid="row1">
-   <div class="col col-xs-10  tb-nopadding" xid="col1"><h4 xid="h41" class=" text-black" bind-text="goodsData.ref('fTitle')"><![CDATA[]]></h4>
+   <div class="col col-xs-10  tb-nopadding" xid="col1"><h4 xid="h41" class=" text-black" bind-text="fcGoodsData.ref('gName')"><![CDATA[]]></h4>
   <div xid="div1"><span xid="span8" class="text-danger h3"><![CDATA[￥]]></span>
-  <span xid="span9" bind-text="goodsData.ref('fPrice')" class="text-danger h3"></span></div>
+  <span xid="span9" bind-text="fcGoodsData.ref('gPrice')" class="text-danger h3"></span></div>
   <div xid="div2" class="text-muted"><span xid="span10"><![CDATA[价格：]]></span>
   <span xid="span11" class="tb-text-del"><![CDATA[￥]]></span>
   <span xid="span12" bind-text="goodsData.ref('fOldPrice')" class="tb-text-del"></span></div></div>

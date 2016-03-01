@@ -9,6 +9,7 @@ define(function(require){
 		this.shopID="";
 	};
 	
+	
 	//返回上一页
 	Model.prototype.backBtnClick = function(event){
 		justep.Shell.closePage();
@@ -20,25 +21,42 @@ define(function(require){
 		1、参数接收事件
 		2、根据参数从服务端过滤数据
 		*/
-		if (this.params && this.params.shopID) {
+		if (this.params /*&& this.params.shopID*/) {//这里把商铺注释了是因为暂时没有商铺数据
 			this.shopID = this.params.shopID;
 			this.goodsID = this.params.goodsID;
 		}
+		this.comp('fcGoodsData').filters.setVar("goodsID", this.goodsID);//过滤数据
+		this.comp('fcGoodsData').refreshData();//过滤完数据之后再刷新一下数据
 	};	
+	
 	
 	//获取轮换图片
 	Model.prototype.imgDataCustomRefresh = function(event){
-		/*
-		1、加载轮换图片数据
-		2、根据goodsID过滤数据
-		3、修改对应图片的src
-		*/		
-		var url = require.toUrl("./detail/json/imgData.json");
-		allData.loadDataFromFile(url,event.source,true);
-		
-        var carousel=this.comp("carousel1");        
-        event.source.each(function(obj){			
-			var fImgUrl=require.toUrl(obj.row.val("fImgUrl"));
+//		/*
+//		1、加载轮换图片数据
+//		2、根据goodsID过滤数据
+//		3、修改对应图片的src
+//		*/		
+//		var url = require.toUrl("./detail/json/imgData.json");
+//		allData.loadDataFromFile(url,event.source,true);
+//		console.log(event.source.count());
+//        var carousel=this.comp("carousel1");        
+//        event.source.each(function(obj){			
+//			var fImgUrl=require.toUrl(obj.row.val("fImgUrl"));
+//			if( obj.index==0){
+//				$(carousel.domNode).find("img").eq(0).attr({"src":fImgUrl});
+//			} else {
+//				carousel.add('<img src="'+fImgUrl+'" class="image-wall tb-img"/>');
+//			}
+//		});
+	};
+	
+	//wu  在刷新完数据之后,给carousel中添加img标签
+	Model.prototype.fcGoodsDataAfterRefresh = function(event){
+		var carousel=this.comp("carousel1"),
+			self = this;        
+        event.source.each(function(obj){		
+        	var fImgUrl = require.toUrl("./fcGoods/images/" + obj.row.val("gPicture"));
 			if( obj.index==0){
 				$(carousel.domNode).find("img").eq(0).attr({"src":fImgUrl});
 			} else {
@@ -46,6 +64,7 @@ define(function(require){
 			}
 		});
 	};
+	
 	
 	//获取商品信息
 	Model.prototype.goodsDataCustomRefresh = function(event){
@@ -143,6 +162,16 @@ define(function(require){
 		this.comp("stateData").setValue("state","0");
 		this.comp("popOver").show();
 	};
+	
+
+	
+	
+
+	
+	
+
+	
+	
 
 	return Model;
 });

@@ -75,10 +75,10 @@ define(function(require){
 		/*
 		 * 1、获取当前行 2、进入详细页面，并传值rowid
 		 */
-		var data = this.comp("goodsData");
+		var fcData = this.comp("fcGoodsData");
 		justep.Shell.showPage("detail", {
-			goodsID : data.getValue("id"),
-			shopID : data.getValue("fShopID")
+			goodsID : fcData.getValue("gID"),
+			shopID : fcData.getValue("sID")
 		});
 	};
 
